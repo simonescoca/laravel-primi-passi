@@ -18,5 +18,25 @@ Route::get('/', function () {
 });
 
 Route::get('/about-us', function () {
-    return view('about-us');
+    $data = [
+        "cars" => [
+            [
+                'brand' => 'Ferrari',
+                'model' => 'SF90',
+            ],
+            [
+                'brand' => 'Lamborghini',
+                'model' => 'Revuelto',
+            ],
+            [
+                'brand' => 'Porsche',
+                'model' => '911 (992) GT3 RS',
+            ],
+            [
+                'brand' => 'McLaren',
+                'model' => 'Senna',
+            ]
+        ]
+    ];
+    return view('about-us', $data);
 })->name('about-us');

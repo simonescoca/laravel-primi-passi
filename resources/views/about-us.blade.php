@@ -9,5 +9,12 @@
         <h1>
             About Us!
         </h1>
+        <ul>
+            @foreach ($cars as $car)
+                <li>
+                    {{ $car["brand"] . " " . $car["model"] }}
+                </li>
+            @endforeach
+        </ul>
     </body>
 </html>
